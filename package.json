@@ -1,0 +1,12 @@
+{
+  "name": "euclidean-demo",
+  "version": "1.0.0",
+  "description": "Demo of Euclidean Rhythms using the Web Audio API",
+  "main": "index.js",
+  "repository": "https://github.com/kolljohnson/euclidean-demo.git",
+  "author": "kolljohnson <kjohnson@pillartechnology.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "euclidean-rhythms": "^2.0.1"
+  }
+}
