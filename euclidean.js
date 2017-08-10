@@ -1,6 +1,6 @@
-var euclidRhythm = require('euclidean-rhythms');
+let euclidRhythm = require('euclidean-rhythms');
 
-
-export function euclid() {
-    
+export function getBeat() {
+    return [1, 1, 1, 1]; 
 }
+
