@@ -6,7 +6,7 @@ describe('Euclidean Rhythms', () => {
 	expect(euclid()).to.equal(undefined)
     });
 
-    it('', () => {
-	
+    it('has a default 4/4 beat', () => {
+	expect(euclid.getBeat()).to.eq([4,4,4,4])
     });
 });
