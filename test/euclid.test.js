@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { audioContext, getBeat } from '../euclidean.js';
+import { audioContext, getBeat, bassDrum } from '../euclidean.js';
 import 'web-audio-test-api';
 
 describe('Euclidean Rhythms', () => {
