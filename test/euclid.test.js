@@ -10,4 +10,8 @@ describe('Euclidean Rhythms', () => {
     it('has an audio context', () => {
 	expect(audioContext).to.not.equal(undefined);
     });
+
+    it('has an audio buffer', () => {
+	expect(bassDrum).to.be.an.instanceof(global.AudioBuffer);
+    });
 });
