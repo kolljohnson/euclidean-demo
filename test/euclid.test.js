@@ -14,4 +14,8 @@ describe('Euclidean Rhythms', () => {
     it('has an audio buffer', () => {
 	expect(bassDrum).to.be.an.instanceof(global.AudioBuffer);
     });
+
+    it('loads a bass drum sample', () => {
+	expect(loadBuffer()).to.be.an.instanceof(global.AudioBuffer);
+    });
 });
