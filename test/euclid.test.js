@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { audioContext, getBeat, bassDrum } from '../euclidean.js';
+import { audioContext, getBeat, bassDrum, getBufferList } from '../euclidean.js';
 import 'web-audio-test-api';
 
 describe('Euclidean Rhythms', () => {
@@ -15,7 +15,17 @@ describe('Euclidean Rhythms', () => {
 	expect(bassDrum).to.be.an.instanceof(global.AudioBuffer);
     });
 
-    it('loads a bass drum sample', () => {
-	expect(loadBuffer()).to.be.an.instanceof(global.AudioBuffer);
+    it('gets back a buffer list from an AJAX request', () => {
+	return Promise.resolve().then(function() {
+          setTimeout(function() {
+	      let buffer = getBufferList();
+	      	expect(buffer.length).to.equal(1);
+          }, 0);
+	});
     });
+
+    //it('loads a bass drum sample', () => {
+    //	let buffer = loadBuffer();
+    //	expect(buffer).to.be.an.instanceof(global.AudioBuffer);
+    //});
 });

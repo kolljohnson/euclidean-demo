@@ -18,8 +18,10 @@ function karmaConfig(configuration) {
     },
       files: [
 	  'bundle.js',
-      'test/*.test.js'
-    ],
+	  'test/*.test.js',
+	  //'sounds/*.wav'
+	    {pattern: 'sounds/*.wav', included: true, watched: false, served: true},
+      ],
     reporters: ['progress'],
     port: 8123,
     singleRun: true,
