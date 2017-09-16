@@ -16,16 +16,22 @@ describe('Euclidean Rhythms', () => {
     });
 
     it('gets back a buffer list from an AJAX request', () => {
-	return Promise.resolve().then(function() {
-          setTimeout(function() {
-	      let buffer = getBufferList();
-	      	expect(buffer.length).to.equal(1);
-          }, 0);
+	return getBufferList().then((buffer) => {
+	    expect(buffer).to.not.equal(undefined);
 	});
     });
 
-    //it('loads a bass drum sample', () => {
-    //	let buffer = loadBuffer();
-    //	expect(buffer).to.be.an.instanceof(global.AudioBuffer);
-    //});
+    it('loads a sample asynchronously', () => {
+	return getBufferList().then((buffer) => {
+	    expect(buffer).to.be.an.instanceof(AudioBuffer);
+	    expect(buffer.length).to.be.greaterThan(1);
+	});
+    });
+
+  //  it('loads a bass drum sample', () => {
+  //	return getBufferList().then((buffers) => {
+	    // expect(buffer).to.be.an.instanceof(global.AudioBuffer);
+	    // expect(buffers.size).to.eql(3);
+   //	});
+   // });
 });

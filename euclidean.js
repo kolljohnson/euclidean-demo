@@ -9,26 +9,19 @@ export function getBeat() {
 }
 
 export function getBufferList() {
-    let request = new XMLHttpRequest();
-    request.open("GET", "sounds/kick.wav", true);
-    request.responseType = 'arraybuffer';
+    return new Promise((resolve, reject) => {
+	resolve(bassDrum);
+	//let request = new XMLHttpRequest();
+	//request.responseType = 'arraybuffer';
+	//request.open("GET", "sounds/kick.wav", true);    
     
-    request.onload = () => {
-	audioContext.decodeAudioData(
-	    request.response,
-	    function (buffer) {
-		if(!buffer) {
-		    return;
-		}
-		let bufferList = [];
-		bufferList.push(buffer);
-		return bufferList;
-	    }
-	);
-    }
+	//request.onload = () => {
+	//    request.status === 200 ? resolve(request.response) : reject(Error(request.statusText))
+	//}
 
-    request.onerror = () => {
-	console.log("XHR Error");
-    }
-    return request.send();
+	//request.onerror = () => {
+	//    reject(Error('XHR Error'));
+	//}
+	//request.send();
+    });
 }

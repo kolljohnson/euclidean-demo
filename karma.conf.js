@@ -19,9 +19,11 @@ function karmaConfig(configuration) {
       files: [
 	  'bundle.js',
 	  'test/*.test.js',
-	  //'sounds/*.wav'
-	    {pattern: 'sounds/*.wav', included: true, watched: false, served: true},
+	   {pattern: 'sounds/*.wav', included: true, watched: false, served: true},
       ],
+      proxies: {
+	  '/sounds/': 'http://localhost:8123/base/sounds/'
+      },
     reporters: ['progress'],
     port: 8123,
     singleRun: true,
