@@ -27,11 +27,4 @@ describe('Euclidean Rhythms', () => {
 	    expect(buffer.length).to.be.greaterThan(1);
 	});
     });
-
-  //  it('loads a bass drum sample', () => {
-  //	return getBufferList().then((buffers) => {
-	    // expect(buffer).to.be.an.instanceof(global.AudioBuffer);
-	    // expect(buffers.size).to.eql(3);
-   //	});
-   // });
 });
